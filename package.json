@@ -1,11 +1,16 @@
 {
   "name": "my-force-app",
   "version": "0.0.0",
+  "engin": {
+    "node":"20.10.0",
+    "npm":"10.2.3"
+  },
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
+    "postinstall": "npm run build",
+    "start": "npm run start --prefix server",
     "start-dev": "ng serve --proxy-config proxy.conf.json",
-    "build": "ng build",
+    "build": "ng build --configuration production",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
   },

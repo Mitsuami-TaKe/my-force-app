@@ -3,7 +3,8 @@ const mongoose = require('mongoose');
 const config = require('./config/dev');
 const fakeDB = require('./fakeDB');
 
-const productRoutes = require('./routes/products')
+const productRoutes = require('./routes/products');
+const path = require('path');
 
 //DBとのコネクションをとる
 mongoose.connect(config.DB_URL)
@@ -18,7 +19,15 @@ mongoose.connect(config.DB_URL)
 
 const app = express();
 
+
+const appPath = path.join( __dirname,'..','dist','browser');
+
 app.use('/api/v1/products',productRoutes)
+
+app.use(express.static(appPath));
+app.get("*",function(req,res){
+    res.sendFile(path.resolve(appPath,'index.html'))
+})
 
 const poot = process.env.PORT || '3001'
 
