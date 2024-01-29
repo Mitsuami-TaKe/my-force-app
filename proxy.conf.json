@@ -1,10 +1,6 @@
 {
   "/api": {
-    "target": "https://my-force-app-take.onrender.com",
-    "secure": false,
-    "pathRewrite": {
-      "^/api": ""
-    },
-    "changeOrigin": true
+    "target": "http://localhost:3001",
+    "secure": false
   }
 }
