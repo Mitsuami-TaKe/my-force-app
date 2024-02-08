@@ -1,110 +1,191 @@
 <div *ngIf="product">
-  <div id="myCarousel" class="carousel slide" data-ride="carousel">
-    <div class="carousel-inner">
-      <div class="carousel-item active">
-        <img class="first-slide" src="{{product.coverImage}}" alt="First slide">
-        <div class="container">
-          <div class="carousel-caption text-left">
-            <h1>{{product.name}}</h1>
-            <p>{{product.description}}</p>
-            <p><a class="btn btn-lg btn-primary" href="#" role="button">$ {{product.price}}</a></p>
+  <div class="page-header page-header-sxs" data-parallax="true"
+    [ngStyle]="{ 'background-image' : 'url(' + [product.coverImage] +')' }">
+    <div class="carousel-caption text-left">
+      <h1>{{product.name}}</h1>
+      <p>{{product.description}}</p>
+    </div>
+    <div class="filter"></div>
+  </div>
+  <div class="main">
+    <div class="section text-center">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-8 mr-auto ml-auto">
+            <h2 class="title">Let's talk product</h2>
+            <h5 class="description">This is the paragraph where you can write more details about your product. Keep you
+              user engaged by providing meaningful information. Remember that by this time, the user is curious,
+              otherwise he wouldn't scroll to get here. Add a button if you want the user to see more.</h5>
+            <br>
+            <a href="#paper-kit" class="btn btn-danger btn-round">See Details</a>
+          </div>
+        </div>
+        <br /><br />
+        <div class="row">
+          <div class="col-md-4">
+            <div class="info">
+              <div class="icon icon-danger">
+                <i class="nc-icon nc-album-2"></i>
+              </div>
+              <div class="description">
+                <h4 class="info-title">{{product.Heading.title[0]}}</h4>
+                <p class="description">{{product.Heading.value[0]}}
+                </p>
+                <a href="#pkp" class="btn btn-link btn-danger">See more</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="info">
+              <div class="icon icon-danger">
+                <i class="nc-icon nc-bulb-63"></i>
+              </div>
+              <div class="description">
+                <h4 class="info-title">{{product.Heading.title[1]}}</h4>
+                <p>{{product.Heading.value[1]}}</p>
+                <a href="#pkp" class="btn btn-link btn-danger">See more</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="info">
+              <div class="icon icon-danger">
+                <i class="nc-icon nc-chart-bar-32"></i>
+              </div>
+              <div class="description">
+                <h4 class="info-title">{{product.Heading.title[2]}}</h4>
+                <p>{{product.Heading.value[2]}}</p>
+                <a href="#pkp" class="btn btn-link btn-danger">See more</a>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </div>
+    <div class="section section-dark text-center">
+      <div class="container">
+        <h2 class="title">Let's talk about us</h2>
+        <div class="row">
+          <div class="col-md-4">
+            <div class="card card-profile card-plain">
+              <div class="card-avatar">
+                <a href="#avatar"><img src="./assets/img/faces/clem-onojeghuo-3.jpg" alt="..."></a>
+              </div>
+              <div class="card-block">
+                <a href="#paper-kit">
+                  <div class="author">
+                    <h4 class="card-title">Henry Ford</h4>
+                    <h6 class="card-category">Product Manager</h6>
+                  </div>
+                </a>
+                <p class="card-description text-center">
+                  Teamwork is so important that it is virtually impossible for you to reach the heights of your
+                  capabilities or make the money that you want without becoming very good at it.
+                </p>
+              </div>
+              <div class="card-footer text-center">
+                <a href="#pablo" class="btn btn-link btn-just-icon btn-neutral"><i class="fa fa-twitter"></i></a>
+                <a href="#pablo" class="btn btn-link btn-just-icon btn-neutral"><i class="fa fa-google-plus"></i></a>
+                <a href="#pablo" class="btn btn-link btn-just-icon btn-neutral"><i class="fa fa-linkedin"></i></a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card card-profile card-plain">
+              <div class="card-avatar">
+                <a href="#avatar"><img src="./assets/img/faces/joe-gardner-2.jpg" alt="..."></a>
+              </div>
+              <div class="card-block">
+                <a href="#paper-kit">
+                  <div class="author">
+                    <h4 class="card-title">Sophie West</h4>
+                    <h6 class="card-category">Designer</h6>
+                  </div>
+                </a>
+                <p class="card-description text-center">
+                  A group becomes a team when each member is sure enough of himself and his contribution to praise the
+                  skill of the others. No one can whistle a symphony. It takes an orchestra to play it.
+                </p>
+              </div>
+              <div class="card-footer text-center">
+                <a href="#pablo" class="btn btn-link btn-just-icon btn-neutral"><i class="fa fa-twitter"></i></a>
+                <a href="#pablo" class="btn btn-link btn-just-icon btn-neutral"><i class="fa fa-google-plus"></i></a>
+                <a href="#pablo" class="btn btn-link btn-just-icon btn-neutral"><i class="fa fa-linkedin"></i></a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card card-profile card-plain">
+              <div class="card-avatar">
+                <a href="#avatar"><img src="./assets/img/faces/erik-lucatero-2.jpg" alt="..."></a>
+              </div>
+              <div class="card-block">
+                <a href="#paper-kit">
+                  <div class="author">
+                    <h4 class="card-title">Robert Orben</h4>
+                    <h6 class="card-category">Developer</h6>
+                  </div>
+                </a>
+                <p class="card-description text-center">
+                  The strength of the team is each individual member. The strength of each member is the team. If you
+                  can laugh together, you can work together, silence isn’t golden, it’s deadly.
+                </p>
+              </div>
+              <div class="card-footer text-center">
+                <a href="#pablo" class="btn btn-link btn-just-icon btn-neutral"><i class="fa fa-twitter"></i></a>
+                <a href="#pablo" class="btn btn-link btn-just-icon btn-neutral"><i class="fa fa-google-plus"></i></a>
+                <a href="#pablo" class="btn btn-link btn-just-icon btn-neutral"><i class="fa fa-linkedin"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container marketing">
+      <hr class="featurette-divider">
+      <div class="row featurette">
+        <div class="col-md-7">
+          <h2 class="featurette-heading">First featurette heading. <span class="text-muted">It'll blow your mind.</span>
+          </h2>
+          <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod
+            semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus
+            commodo.</p>
+        </div>
+        <div class="col-md-5">
+          <img class="featurette-image img-fluid mx-auto" src="./assets/img/500x500.svg"
+            alt="Generic placeholder image">
+        </div>
+      </div>
+      <hr class="featurette-divider">
+      <div class="row featurette">
+        <div class="col-md-7 order-md-2">
+          <h2 class="featurette-heading">Oh yeah, it's that good. <span class="text-muted">See for yourself.</span></h2>
+          <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod
+            semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus
+            commodo.</p>
+        </div>
+        <div class="col-md-5 order-md-1">
+          <img class="featurette-image img-fluid mx-auto" src="./assets/img/500x500.svg"
+            alt="Generic placeholder image">
+        </div>
+      </div>
+      <hr class="featurette-divider">
+      <div class="row featurette">
+        <div class="col-md-7">
+          <h2 class="featurette-heading">And lastly, this one. <span class="text-muted">Checkmate.</span></h2>
+          <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod
+            semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus
+            commodo.</p>
+        </div>
+        <div class="col-md-5">
+          <img class="featurette-image img-fluid mx-auto" src="./assets/img/500x500.svg"
+            alt="Generic placeholder image">
+        </div>
+      </div>
+      <hr class="featurette-divider">
+    </div>
+    <footer class="container">
+      <p class="float-right"><a href="#">Back to top</a></p>
+      <p>&copy; 2017-2018 Company, Inc. &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
+    </footer>
   </div>
-
-
-  <!-- Marketing messaging and featurettes
-================================================== -->
-  <!-- Wrap the rest of the page in another container to center all the content. -->
-
-  <div class="container marketing">
-
-    <!-- Three columns of text below the carousel -->
-    <div class="row">
-      <div class="col-lg-4">
-        <img class="rounded-circle"
-          src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw=="
-          alt="Generic placeholder image" width="140" height="140">
-        <h2>{{product.Heading.title[0]}}</h2>
-        <p>{{product.Heading.value[0]}}</p>
-        <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
-      </div><!-- /.col-lg-4 -->
-      <div class="col-lg-4">
-        <img class="rounded-circle"
-          src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw=="
-          alt="Generic placeholder image" width="140" height="140">
-        <h2>{{product.Heading.title[1]}}</h2>
-        <p>{{product.Heading.value[1]}}</p>
-        <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
-      </div><!-- /.col-lg-4 -->
-      <div class="col-lg-4">
-        <img class="rounded-circle"
-          src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw=="
-          alt="Generic placeholder image" width="140" height="140">
-        <h2>{{product.Heading.title[2]}}</h2>
-        <p>{{product.Heading.value[2]}}</p>
-        <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
-      </div><!-- /.col-lg-4 -->
-    </div><!-- /.row -->
-
-
-    <!-- START THE FEATURETTES -->
-
-    <hr class="featurette-divider">
-
-    <div class="row featurette">
-      <div class="col-md-7">
-        <h2 class="featurette-heading">First featurette heading. <span class="text-muted">It'll blow your mind.</span>
-        </h2>
-        <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod
-          semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus
-          commodo.</p>
-      </div>
-      <div class="col-md-5">
-        <img class="featurette-image img-fluid mx-auto" src="./assets/img/500x500.svg" alt="Generic placeholder image">
-      </div>
-    </div>
-
-    <hr class="featurette-divider">
-
-    <div class="row featurette">
-      <div class="col-md-7 order-md-2">
-        <h2 class="featurette-heading">Oh yeah, it's that good. <span class="text-muted">See for yourself.</span></h2>
-        <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod
-          semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus
-          commodo.</p>
-      </div>
-      <div class="col-md-5 order-md-1">
-        <img class="featurette-image img-fluid mx-auto" src="./assets/img/500x500.svg" alt="Generic placeholder image">
-      </div>
-    </div>
-
-    <hr class="featurette-divider">
-
-    <div class="row featurette">
-      <div class="col-md-7">
-        <h2 class="featurette-heading">And lastly, this one. <span class="text-muted">Checkmate.</span></h2>
-        <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod
-          semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus
-          commodo.</p>
-      </div>
-      <div class="col-md-5">
-        <img class="featurette-image img-fluid mx-auto" src="./assets/img/500x500.svg" alt="Generic placeholder image">
-      </div>
-    </div>
-
-    <hr class="featurette-divider">
-
-    <!-- /END THE FEATURETTES -->
-
-  </div><!-- /.container -->
-
-
-  <!-- FOOTER -->
-  <footer class="container">
-    <p class="float-right"><a href="#">Back to top</a></p>
-    <p>&copy; 2017-2018 Company, Inc. &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
-  </footer>
-</div>

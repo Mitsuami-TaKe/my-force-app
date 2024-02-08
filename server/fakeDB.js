@@ -5,7 +5,7 @@ class fakeDB {
     constructor() {
         this.product = [
             {
-                coverImage: "../../../assets/img/phone-cover.jpg",
+                coverImage: "../../../assets/img/phone-cover1.jpg",
                 id: 1,
                 name: 'Phone XL',
                 stock: 100,
@@ -20,7 +20,7 @@ class fakeDB {
                 }
             },
             {
-                coverImage: "../../../assets/img/phone-cover.jpg",
+                coverImage: "../../../assets/img/phone-cover2.jpg",
                 id: 2,
                 name: 'Phone MiniMini',
                 stock: 150,
@@ -35,7 +35,7 @@ class fakeDB {
                 }
             },
             {
-                coverImage: './assets/img/phone-cover.jpg',
+                coverImage: './assets/img/phone-cover3.jpg',
                 id: 3,
                 name: 'Phone Standard',
                 stock: 200,
@@ -50,7 +50,7 @@ class fakeDB {
                 }
             },
             {
-                coverImage: './assets/img/phone-cover.jpg',
+                coverImage: './assets/img/phone-cover4.jpg',
                 id: 4,
                 name: 'Phone Great',
                 stock: 250,
@@ -69,6 +69,7 @@ class fakeDB {
 
     async initDB() {
         //いったんさらにしてもっかいデータぶち込む
+        console.log('DBリセット&初期データぶち込み')
         await this.cleanDB()
         this.pushProductsToDB()
     }
