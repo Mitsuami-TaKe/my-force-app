@@ -2,6 +2,4 @@
 
 module.exports = {
     DB_URL: process.env.DB_URL,
-    //DB_URL: 'mongodb+srv://test:testUser@atlascluster.jp5foxk.mongodb.net/?retryWrites=true&w=majority'
-
 }

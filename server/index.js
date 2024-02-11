@@ -6,8 +6,13 @@ const fakeDB = require('./fakeDB');
 const productRoutes = require('./routes/products');
 const path = require('path');
 
-//DBとのコネクションをとる
-mongoose.connect(config.DB_URL)
+const DB_connectID ='mongodb+srv://test:testUser@atlascluster.jp5foxk.mongodb.net/?retryWrites=true&w=majority'
+
+//DBとのコネクションをとる envがあればそれを使う
+if (config.DB_URL) {
+    DB_connectID =  config.DB_URL;
+}
+mongoose.connect(DB_connectID)
     .then(
         () => {
             //コネクションができたら製品情報に関するDAO(ノーコードのやつもDAOっていうのか知らんけど)
